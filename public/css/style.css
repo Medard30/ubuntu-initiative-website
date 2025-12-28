@@ -198,6 +198,34 @@ img {
     color: var(--color-gold);
 }
 
+.logo-image {
+    height: 40px;
+    width: auto;
+    margin-right: 0.75rem;
+    transition: var(--transition);
+    filter: drop-shadow(0 2px 8px rgba(201, 162, 39, 0.3));
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 12px rgba(201, 162, 39, 0.5));
+}
+
+.logo-placeholder {
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, #3D7A1E, #C9A227);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.7rem;
+    color: white;
+    margin-right: 0.75rem;
+    box-shadow: 0 0 20px rgba(201, 162, 39, 0.4);
+}
+
 .nav-menu {
     display: flex;
     gap: var(--spacing-lg);
