@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involved - Ubuntu Initiative</title>
+    <meta name="description" content="Join Ubuntu Initiative as a volunteer or partner to make a difference in children's lives.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo"><span class="logo-text">Ubuntu Initiative</span></a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/about.html" class="nav-link">About Us</a></li>
+                <li><a href="/programs.html" class="nav-link">Programs</a></li>
+                <li><a href="/impact.html" class="nav-link">Impact</a></li>
+                <li><a href="/gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="/get-involved.html" class="nav-link">Get Involved</a></li>
+                <li><a href="/contact.html" class="nav-link nav-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="flash-messages" class="flash-messages"></div>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Get Involved</h1>
+                <p>Join us in making a difference in children's lives</p>
+            </div>
+        </section>
+
+        <!-- WAYS TO HELP -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Ways to Help</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="involvement-grid">
+                    <div class="involvement-card" data-testid="card-volunteer">
+                        <div class="involvement-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </div>
+                        <h3>Volunteer</h3>
+                        <p>Share your time and skills to support our programs. We welcome volunteers for teaching, mentoring, administration, and more.</p>
+                    </div>
+                    
+                    <div class="involvement-card" data-testid="card-partner">
+                        <div class="involvement-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h3>Partner With Us</h3>
+                        <p>Organizations and businesses can partner with us to extend our reach and impact. Let's collaborate for change.</p>
+                    </div>
+                    
+                    <div class="involvement-card" data-testid="card-support">
+                        <div class="involvement-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+                            </svg>
+                        </div>
+                        <h3>Support a Child</h3>
+                        <p>Your contribution can provide education, supplies, and opportunities for a child in need.</p>
+                    </div>
+                    
+                    <div class="involvement-card" data-testid="card-sponsor">
+                        <div class="involvement-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/>
+                            </svg>
+                        </div>
+                        <h3>Sponsor a Workshop</h3>
+                        <p>Fund a community workshop to train teachers or teach digital skills to youth.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VOLUNTEER FORM -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Volunteer With Us</h2>
+                    <div class="section-divider"></div>
+                    <p>Fill out the form below and we'll get in touch with opportunities that match your interests.</p>
+                </div>
+                
+                <div class="form-container">
+                    <form id="volunteer-form" class="contact-form" data-testid="form-volunteer">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Your full name" data-testid="input-name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com" data-testid="input-email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="programInterest">Area of Interest *</label>
+                            <select id="programInterest" name="programInterest" required data-testid="select-program">
+                                <option value="">Select an area...</option>
+                                <option value="Education Support">Education Support</option>
+                                <option value="Digital Literacy">Digital Literacy</option>
+                                <option value="AI Awareness">AI Awareness</option>
+                                <option value="Community Workshops">Community Workshops</option>
+                                <option value="Administration">Administration & Operations</option>
+                                <option value="Fundraising">Fundraising</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Tell us about yourself (optional)</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Share your skills, experience, or why you want to volunteer..." data-testid="textarea-message"></textarea>
+                        </div>
+                        
+                        <div class="form-submit-container">
+                            <button type="submit" class="btn btn-primary" data-testid="button-submit-volunteer">Submit Application</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- PARTNER SECTION -->
+        <section class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="content-text">
+                        <h2>Partner With Us</h2>
+                        <div class="section-divider left"></div>
+                        <p>We welcome partnerships with organizations, businesses, schools, and institutions that share our vision for education and empowerment.</p>
+                        
+                        <h4>Partnership Opportunities:</h4>
+                        <div class="partnership-list">
+                            <div class="partnership-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                                Corporate Sponsorships
+                            </div>
+                            <div class="partnership-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                Program Collaboration
+                            </div>
+                            <div class="partnership-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                                Technology Donations
+                            </div>
+                            <div class="partnership-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                                Skills-Based Volunteering
+                            </div>
+                            <div class="partnership-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                                Awareness Campaigns
+                            </div>
+                        </div>
+                        
+                        <a href="/contact.html" class="btn btn-primary">Contact Us to Partner</a>
+                    </div>
+                    
+                    <div class="content-image">
+                        <div class="image-placeholder">
+                            <span>Partnership Image</span>
+                            <small>Add: Image coming soon!</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Ubuntu Initiative</h3>
+                    <p>Empowering communities through education and technology in East and Central Africa.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/programs.html">Our Programs</a></li>
+                        <li><a href="/impact.html">Our Impact</a></li>
+                        <li><a href="/gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Get Involved</h3>
+                    <ul class="footer-links">
+                        <li><a href="/get-involved.html">Volunteer</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><strong>Email:</strong> <a href="mailto:ubuntu.initiative01@gmail.com">ubuntu.initiative01@gmail.com</a></li>
+                        <li><strong>Location:</strong> <span>East Africa</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ubuntu Initiative. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        navToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); navToggle.classList.toggle('active'); });
+        document.querySelectorAll('.nav-link').forEach(link => { link.addEventListener('click', () => { navMenu.classList.remove('active'); navToggle.classList.remove('active'); }); });
+
+        // Form submission
+        document.getElementById('volunteer-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const form = e.target;
+            const flashMessages = document.getElementById('flash-messages');
+            
+            const data = {
+                name: form.name.value,
+                email: form.email.value,
+                programInterest: form.programInterest.value,
+                message: form.message.value || ''
+            };
+            
+            try {
+                const response = await fetch('/api/volunteers', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                
+                if (response.ok) {
+                    flashMessages.innerHTML = '<div class="flash-message flash-success">Thank you for volunteering! We will contact you soon.<button class="flash-close" onclick="this.parentElement.remove()">&times;</button></div>';
+                    form.reset();
+                } else {
+                    const error = await response.json();
+                    flashMessages.innerHTML = '<div class="flash-message flash-error">Error: ' + (error.message || 'Please try again.') + '<button class="flash-close" onclick="this.parentElement.remove()">&times;</button></div>';
+                }
+            } catch (err) {
+                flashMessages.innerHTML = '<div class="flash-message flash-error">Sorry, there was an error. Please try again.<button class="flash-close" onclick="this.parentElement.remove()">&times;</button></div>';
+            }
+        });
+    </script>
+</body>
+</html>

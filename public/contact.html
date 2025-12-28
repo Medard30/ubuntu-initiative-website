@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Ubuntu Initiative</title>
+    <meta name="description" content="Get in touch with Ubuntu Initiative. We'd love to hear from you.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    /* Page-specific center alignment and layout for contact page */
+    .contact-wrapper{max-width:900px;margin:0 auto;text-align:center;display:flex;flex-direction:column;gap:1.5rem;align-items:center;padding:1.5rem;}
+    .contact-form{width:100%;}
+    .contact-form .form-group{max-width:700px;margin:0 auto;text-align:left;}
+    .btn-full{width:100%;}
+    .contact-details,.contact-social{display:flex;flex-direction:column;gap:0.75rem;align-items:center;}
+    .contact-item{display:flex;align-items:center;gap:0.75rem;}
+    .contact-icon{display:flex;align-items:center;justify-content:center;}
+    .contact-icon svg{width:28px;height:28px;}
+    @media(min-width:768px){
+      .contact-wrapper{flex-direction:row;align-items:flex-start;justify-content:space-between;}
+      .contact-info,.contact-form-container{width:48%;}
+      .contact-form .form-group{max-width:100%;}
+    }
+    
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo"><span class="logo-text">Ubuntu Initiative</span></a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/about.html" class="nav-link">About Us</a></li>
+                <li><a href="/programs.html" class="nav-link">Programs</a></li>
+                <li><a href="/impact.html" class="nav-link">Impact</a></li>
+                <li><a href="/gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="/get-involved.html" class="nav-link">Get Involved</a></li>
+                <li><a href="/contact.html" class="nav-link nav-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="flash-messages" class="flash-messages"></div>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-wrapper">
+                        <div class="contact-info">
+                            <h2>Get in Touch</h2>
+                            <p>Have questions about our programs or want to learn more about how you can help? Reach out to us!</p>
+
+                            <div class="contact-details">
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <strong>Email</strong><br>
+                                        <a href="mailto:ubuntu.initiative01@gmail.com">ubuntu.initiative01@gmail.com</a>
+                                    </div>
+                                </div>
+
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <strong>Location</strong><br>
+                                        <span>East &amp; Central Africa</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="contact-social">
+                                <h3>Follow Us</h3>
+                                <div class="social-links">
+                                    <a href="https://www.facebook.com/share/16Yy2HsTAf/" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                                    </a>
+                                    <a href="https://twitter.com/Medard14484131" class="social-link" aria-label="Twitter">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                                    </a>
+                                    <a href="https://www.instagram.com/ubuntu_initiative01" class="social-link" aria-label="Instagram">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/fariji-badesile-b9aa09354" class="social-link" aria-label="LinkedIn">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="contact-form-container">
+                            <h2>Send Us a Message</h2>
+                            <form id="contact-form" class="contact-form" data-testid="form-contact">
+                                <div class="form-group">
+                                    <label for="name">Full Name *</label>
+                                    <input type="text" id="name" name="name" required placeholder="Your full name" data-testid="input-name">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required placeholder="your@email.com" data-testid="input-email">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="subject">Subject *</label>
+                                    <input type="text" id="subject" name="subject" required placeholder="What is this about?" data-testid="input-subject">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Message *</label>
+                                    <textarea id="message" name="message" rows="5" required placeholder="Your message..." data-testid="textarea-message"></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-full" data-testid="button-submit-contact">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Ubuntu Initiative</h3>
+                    <p>Empowering communities through education and technology in East and Central Africa.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/programs.html">Our Programs</a></li>
+                        <li><a href="/impact.html">Our Impact</a></li>
+                        <li><a href="/gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Get Involved</h3>
+                    <ul class="footer-links">
+                        <li><a href="/get-involved.html">Volunteer</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><strong>Email:</strong> <a href="mailto:ubuntu.initiative01@gmail.com">ubuntu.initiative01@gmail.com</a></li>
+                        <li><strong>Location:</strong> <span>East Africa</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ubuntu Initiative. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        navToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); navToggle.classList.toggle('active'); });
+        document.querySelectorAll('.nav-link').forEach(link => { link.addEventListener('click', () => { navMenu.classList.remove('active'); navToggle.classList.remove('active'); }); });
+
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const form = e.target;
+            const flashMessages = document.getElementById('flash-messages');
+            
+            const data = {
+                name: form.name.value,
+                email: form.email.value,
+                subject: form.subject.value,
+                message: form.message.value
+            };
+            
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                
+                if (response.ok) {
+                    flashMessages.innerHTML = '<div class="flash-message flash-success">Thank you for your message! We will get back to you soon.<button class="flash-close" onclick="this.parentElement.remove()">&times;</button></div>';
+                    form.reset();
+                } else {
+                    const error = await response.json();
+                    flashMessages.innerHTML = '<div class="flash-message flash-error">Error: ' + (error.message || 'Please try again.') + '<button class="flash-close" onclick="this.parentElement.remove()">&times;</button></div>';
+                }
+            } catch (err) {
+                flashMessages.innerHTML = '<div class="flash-message flash-error">Sorry, there was an error. Please try again.<button class="flash-close" onclick="this.parentElement.remove()">&times;</button></div>';
+            }
+        });
+    </script>
+</body>
+</html>
