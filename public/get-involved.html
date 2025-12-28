@@ -231,36 +231,18 @@
         navToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); navToggle.classList.toggle('active'); });
         document.querySelectorAll('.nav-link').forEach(link => { link.addEventListener('click', () => { navMenu.classList.remove('active'); navToggle.classList.remove('active'); }); });
 
-        // Form submission
-        document.getElementById('volunteer-form').addEventListener('submit', async (e) => {
+        // Form submission - opens email
+        document.getElementById('volunteer-form').addEventListener('submit', (e) => {
             e.preventDefault();
             const form = e.target;
-            const flashMessages = document.getElementById('flash-messages');
-            
-            const data = {
-                name: form.name.value,
-                email: form.email.value,
-                programInterest: form.programInterest.value,
-                message: form.message.value || ''
-            };
-            
-            try {
-                const response = await fetch('/api/volunteers', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
-                });
-                
-                if (response.ok) {
-                    flashMessages.innerHTML = '<div class="flash-message flash-success">Thank you for volunteering! We will contact you soon.<button class="flash-close" onclick="this.parentElement.remove()">&times;</button></div>';
-                    form.reset();
-                } else {
-                    const error = await response.json();
-                    flashMessages.innerHTML = '<div class="flash-message flash-error">Error: ' + (error.message || 'Please try again.') + '<button class="flash-close" onclick="this.parentElement.remove()">&times;</button></div>';
-                }
-            } catch (err) {
-                flashMessages.innerHTML = '<div class="flash-message flash-error">Sorry, there was an error. Please try again.<button class="flash-close" onclick="this.parentElement.remove()">&times;</button></div>';
-            }
+            const subject = encodeURIComponent('Volunteer Application: ' + form.name.value);
+            const body = encodeURIComponent(
+                'Name: ' + form.name.value + '\n' +
+                'Email: ' + form.email.value + '\n' +
+                'Area of Interest: ' + form.programInterest.value + '\n' +
+                'Message: ' + (form.message.value || 'N/A')
+            );
+            window.location.href = 'mailto:ubuntu.initiative01@gmail.com?subject=' + subject + '&body=' + body;
         });
     </script>
 </body>
